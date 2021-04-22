@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head.ejs') %>
+    <body>
+        <div class="text-center" style="padding:50px 0">
+            <div class="logo">Task Creation Page</div>
+            <!-- Main Form -->
+            <div class="login-form-1">
+                <form id="register-form" class="text-left" method="POST" action="/createNewTask">
+                    <div class="login-form-main-message"></div>
+                    <div class="main-login-form">
+                        <div class="login-group">
+                            <div class="form-group">
+                                <label for="task" class="sr-only">Task</label>
+                                <input type="text" class="form-control" id="task" name="task" placeholder="Task Name">
+                            </div>
+                                <input type="hidden" class="form-control" id="task" name="uuid" value="<%=uuid%>">
+                        </div>
+                        <button type="submit" class="login-button">Confirm</button>
+                    </div>
+                </form>
+            </div>
+            <!-- end:Main Form -->
+        </div>
+    </body>
+</html>
