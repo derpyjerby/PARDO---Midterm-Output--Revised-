@@ -2,7 +2,10 @@
 <html lang="en">
     <%- include ('./partials/head.ejs') %>
     <body class="d-flex justify-content-center">
-        <form action="/createAccount" method="POST">
+        <% if(typeof(err) != 'undefined') {%>
+            <p style="color: red"> <%= err %></p>
+        <% }%>
+        <form action="/account/create_account" method="POST">
             <div class="form-group">
                 <input type="text" name="username" placeholder="Username" required>
             </div>

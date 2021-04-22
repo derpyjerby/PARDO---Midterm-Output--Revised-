@@ -3,7 +3,7 @@
     <%- include ('./partials/head.ejs') %>
 	
 <body>
-    <h1><%=userdata[0].username%>'s Task List:</h1>
+    <h1><%=username%>'s Task List:</h1>
 	<table class="table table-bordered">
 		<thead>
 		  <tr>
@@ -18,8 +18,8 @@
 			<tr>
 					<td><%=tasksList[i].task%></td>
 					<td><%=tasksList[i].status%></td>
-					<td><%=tasksList[i].created_at%></td>
-					<td><a href="/deleteTask?id=<%=tasksList[i].id%>" class="btn btn-primary">Resolved</a></td>
+					<td><%=tasksList[i].createdAt%></td>
+					<td><a href="/task/delete_task?id=<%=tasksList[i].id%>" class="btn btn-primary">Resolved</a></td>
 			</tr>
 		 	<% } %>
 		</tbody>
@@ -43,15 +43,15 @@
 		  </div>
 		</div>
 	  </div>
-	  <a href="/createNewTask/<%=userdata[0].uuid%>">>Create New Task</a>
+	  <a href="/task/createNewTask/?code=<%=userdata.code%>">>Create New Task</a>
 	  <a href="/logout">Log out</a>
 
-	  <script>
+	  <!-- <script>
 	  $(document).ready(function(){ 
 		$(form).on('submit', function(){ 
 			  location.reload();
 		});
 	  })
-	 </script>
+	 </script> -->
 </body>
 </html>

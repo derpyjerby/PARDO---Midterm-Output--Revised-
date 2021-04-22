@@ -8,7 +8,7 @@ const task = instance.sequelize.define("tasks", {
         primaryKey: true,
         allowNull: false
       },
-      account_uuid: {
+      code: {
         type: DataTypes.STRING,
         allowNull: false
       },
@@ -31,13 +31,11 @@ const task = instance.sequelize.define("tasks", {
       deletedAt: {
         type: DataTypes.DATE
       }
-    }, {
-        createdAt: true,
-        updatedAt: true,
-        deletedAt: true,
-        paranoid: true,
-        tableName: "tasks"
-    }
-)
+        // createdAt: true,
+        // updatedAt: true,
+        // deletedAt: true,
+        // paranoid: true,
+        // tableName: "tasks"
+});
 
 exports.model = task;

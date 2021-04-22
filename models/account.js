@@ -25,7 +25,7 @@ const account = instance.sequelize.define("accounts", {
         createdAt: true,
         updatedAt: true,
         deletedAt: true,
-        paranoid: true,
+        // paranoid: true,
         tableName: "accounts"
     }
 )
