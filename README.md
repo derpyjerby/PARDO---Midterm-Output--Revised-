@@ -1,6 +1,8 @@
 # PARDO-Midterm-Output-Sequelize-
 
-Hello! Kind of new to node.js and front-end. But to use first perform:
+Hello! This is a revised version of my to-do list output (midterm) except this is integrated with the sequelize library.
+
+But to use, first perform:
 
 `npm install`
 
